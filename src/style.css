@@ -1,0 +1,392 @@
+@import url("https://fonts.googleapis.com/css2?family=Mansalva&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@1,500&display=swap");
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+body {
+  background: #4a7337;
+  height: 100vh;
+  width: 100vw;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: 1fr 8fr;
+      grid-template-rows: 1fr 8fr;
+}
+
+.headerContainer {
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 1;
+  grid-row: 1 / 2;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: 3fr 1fr;
+      grid-template-rows: 3fr 1fr;
+}
+
+.header {
+  background: #121212;
+  background: -webkit-gradient(linear, left top, right top, from(#121212), to(#4a7337));
+  background: linear-gradient(90deg, #121212 0%, #4a7337 100%);
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 1;
+  grid-row: 1 / 2;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 4fr;
+      grid-template-columns: 1fr 4fr;
+}
+
+.headerleft {
+  margin: 0;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 1;
+  grid-column: 1 / 2;
+}
+
+.headerRight {
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 1;
+  grid-column: 2 / 3;
+  text-align: center;
+  margin-top: 1rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-family: 'Mansalva', cursive;
+  font-size: 7rem;
+  font-weight: 900;
+  color: #cda989;
+}
+
+.logo {
+  width: 100%;
+  height: 100%;
+}
+
+.tabsContainer {
+  -ms-grid-row: 2;
+  -ms-grid-row-span: 1;
+  grid-row: 2 / 3;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr 1fr;
+      grid-template-columns: 1fr 1fr 1fr;
+}
+
+.homeTab {
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 1;
+  grid-column: 1 / 2;
+  font-size: 2rem;
+  border-radius: 10px;
+  background: #ddd48f;
+  color: #AA471F;
+  font-family: 'Poppins', sans-serif;
+}
+
+.menuTab {
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 1;
+  grid-column: 2 / 3;
+  font-size: 2rem;
+  border-radius: 10px;
+  background: #ddd48f;
+  color: #AA471F;
+  font-family: 'Poppins', sans-serif;
+}
+
+.contactTab {
+  -ms-grid-column: 3;
+  -ms-grid-column-span: 1;
+  grid-column: 3 / 4;
+  font-size: 2rem;
+  border-radius: 10px;
+  background: #ddd48f;
+  color: #AA471F;
+  font-family: 'Poppins', sans-serif;
+}
+
+.homeContent {
+  -ms-grid-row: 2;
+  -ms-grid-row-span: 1;
+  grid-row: 2 / 3;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.homeContent ::after {
+  content: "";
+  background-image: url("https://images.unsplash.com/photo-1542814880-7e62cf14b7c8?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=772&q=80");
+  background-size: cover;
+  opacity: .5;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  position: absolute;
+  z-index: -1;
+}
+
+.info {
+  font-size: 3rem;
+  font-weight: 900;
+  color: white;
+  font-family: 'Poppins', sans-serif;
+  text-align: center;
+}
+
+.menuContent {
+  -ms-grid-row: 2;
+  -ms-grid-row-span: 1;
+  grid-row: 2 / 3;
+  display: -ms-grid;
+  display: grid;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+  -ms-grid-rows: 1fr 1fr 1fr 1fr;
+      grid-template-rows: 1fr 1fr 1fr 1fr;
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.5rem;
+}
+
+.dish1Container {
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 1;
+  grid-row: 1 / 2;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: .5fr 4fr 1fr .5fr;
+      grid-template-columns: .5fr 4fr 1fr .5fr;
+}
+
+.dish2Container {
+  -ms-grid-row: 2;
+  -ms-grid-row-span: 1;
+  grid-row: 2 / 3;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: .5fr 4fr 1fr .5fr;
+      grid-template-columns: .5fr 4fr 1fr .5fr;
+}
+
+.dish3Container {
+  -ms-grid-row: 3;
+  -ms-grid-row-span: 1;
+  grid-row: 3 / 4;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: .5fr 4fr 1fr .5fr;
+      grid-template-columns: .5fr 4fr 1fr .5fr;
+}
+
+.dish4Container {
+  -ms-grid-row: 4;
+  -ms-grid-row-span: 1;
+  grid-row: 4 / 5;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: .5fr 4fr 1fr .5fr;
+      grid-template-columns: .5fr 4fr 1fr .5fr;
+}
+
+.dish1Text {
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 1;
+  grid-column: 2 / 3;
+}
+
+.dish1Price {
+  -ms-grid-column: 3;
+  -ms-grid-column-span: 1;
+  grid-column: 3 / 4;
+}
+
+.dish2Text {
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 1;
+  grid-column: 2 / 3;
+}
+
+.dish2Price {
+  -ms-grid-column: 3;
+  -ms-grid-column-span: 1;
+  grid-column: 3 / 4;
+}
+
+.dish3Text {
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 1;
+  grid-column: 2 / 3;
+}
+
+.dish3Price {
+  -ms-grid-column: 3;
+  -ms-grid-column-span: 1;
+  grid-column: 3 / 4;
+}
+
+.dish4Text {
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 1;
+  grid-column: 2 / 3;
+}
+
+.dish4Price {
+  -ms-grid-column: 3;
+  -ms-grid-column-span: 1;
+  grid-column: 3 / 4;
+}
+
+.contactContent {
+  -ms-grid-row: 2;
+  -ms-grid-row-span: 1;
+  grid-row: 2 / 3;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-family: 'Poppins', sans-serif;
+  gap: 4rem;
+}
+
+.formContainer {
+  width: 500px;
+  height: 500px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: left;
+  gap: 1rem;
+}
+
+.nameLabelContainer {
+  -ms-flex-negative: .5;
+      flex-shrink: .5;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.emailLabelContainer {
+  -ms-flex-negative: .5;
+      flex-shrink: .5;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.messageTextAreaContainer {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.messageTextArea {
+  resize: none;
+  height: 50%;
+}
+
+.contactUs {
+  font-size: 4rem;
+}
+/*# sourceMappingURL=style.css.map */
